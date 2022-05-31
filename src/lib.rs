@@ -70,6 +70,11 @@ pub struct A32;
 #[repr(align(64))]
 pub struct A64;
 
+/// 64-byte alignment
+#[derive(Clone, Copy)]
+#[repr(align(4096))]
+pub struct A4096;
+
 /// A newtype with alignment of at least `A` bytes
 #[repr(C)]
 pub struct Aligned<A, T>
